@@ -38,3 +38,37 @@ function getExercise(){
 
 
 
+
+var clicked = false;
+
+function runClock(){
+    if(!clicked){
+        clicked = true;
+        var timer = 60;
+        var audio = new Audio('chime.wav');
+        var x =  setInterval(function(){
+            timer = timer-1;
+            console.log(timer);
+            document.getElementById('timer').innerHTML = timer;
+            if(timer < 0){
+                clearInterval(x);
+                audio.play();
+                clicked = false;
+                document.getElementById("timer").innerHTML = "Time's Up";
+            }
+        }, 1000);
+    }
+
+
+}
+
+
+window.addEventListener('load', function load(event){
+    var createButton = document.getElementById('start_timer');
+    createButton.addEventListener('click', function() { runClock(); });
+});
+
+window.addEventListener('load', function load(event){
+    var createButton = document.getElementById('get_exercise');
+    createButton.addEventListener('click', function() { getExercise(); });
+});

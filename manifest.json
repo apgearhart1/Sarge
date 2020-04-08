@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
     "name":"Sarge",
-    "Description":"Working from home? Sarge will keep you going and out of your chair so you can keep your productivity high and your spirits even higher!",
+    "description":"Working from home? Sarge will keep you going and out of your chair so you can keep your productivity high and your spirits even higher!",
     "version":"1.0.0",
     "icons":{
         "128":"./images/soldiersmall.png"
     },
     "browser_action":{
-        "default_icon":"soldier.png",
+        "default_icon":"./images/soldier.png",
         "default_popup":"popup.html"
     },
     "permissions":["activeTab"]

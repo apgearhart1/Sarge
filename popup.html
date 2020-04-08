@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./external/loading-bar.css"/>
     <script type="text/javascript" src="./external/loading-bar.js"></script>
     <title>Sarge</title>
-    <script src="popup.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./popup.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="header">
@@ -26,8 +26,8 @@
     <div class="workouts">
         <div class="flex-container">
             <div class="flex">
-                <button onclick="runClock()">Start Timer</button>
-                <button onclick="getExercise()">New Exercise</button>
+                <button id="start_timer">Start Timer</button>
+                <button id="get_exercise">New Exercise</button>
             </div>
             <div class="flex">
                 <div class="border">
@@ -36,55 +36,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        var clicked = false;
-
-            function runClock(){
-                if(!clicked){
-                    clicked = true;
-                    var timer = 60;
-                    var audio = new Audio('chime.wav');
-                    var x =  setInterval(function(){
-                        timer = timer-1;
-                        console.log(timer);
-                        document.getElementById('timer').innerHTML = timer;
-                        if(timer < 0){
-                            clearInterval(x);
-                            audio.play();
-                            clicked = false;
-                            document.getElementById("timer").innerHTML = "Time's Up";
-                        }
-                    }, 1000);
-                }
-            
-
-            }
-
-        
-      
-
-      
-    </script>
-
     
 </body>
 </html>
-
-
-
-<style type="text/css">
-
-    .myBar path.mainline {
-    stroke-width: 10;
-    stroke: rgb(3, 163, 3);
-    stroke-linecap: round;
-  }
-  .myBar path.baseline {
-    stroke-width: 14;
-    stroke:red;
-    stroke-linecap: round;
-    filter:url(#custom-shadow);
-  }
-    
-</style>

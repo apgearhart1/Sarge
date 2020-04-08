@@ -37,11 +37,7 @@ img{
 }
 
 
-.timer{
-    color: darkgreen;
-    font-family: 'Montserrat', sans-serif;
 
-}
 
 
 button{
@@ -71,7 +67,9 @@ button:hover{
     padding: 0 25%;
     margin-top: 1vh;
     text-shadow: 0 0.04em .1em rgba(0,0,0,0.35);
-
+    color: darkgreen;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: .9vh;
 
     
     
